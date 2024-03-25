@@ -91,9 +91,9 @@ int main(int argc, char* argv[]) {
     }
 
     std::string myIpAddress = getMyIpAddress(argv[1]);
+    std::string myMacAddress = findMyMacAddress(argv[1]);
 
     for (int i = 0; i < argc / 2 - 1; i++) {
-        std::string myMacAddress = findMyMacAddress(argv[1]);
         std::string targetMacAddress = findMacAddress(targetIpCollect[i]);
 
         EthArpPacket packet;
